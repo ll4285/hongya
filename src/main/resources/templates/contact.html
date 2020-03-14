@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>联系_我的网站</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="skin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="skin/css/animate.min.css">
+    <link rel="stylesheet" href="skin/css/style.css">
+</head>
+<body id="moar">
+<div th:replace="common :: myheader"></div>
+
+<!--end-->
+<section class="banner">
+    <div class="banner-page" style="background-image:url(skin/images/1-1P321093045547.jpg)"><img
+            src="skin/images/banner-height-page.gif" class="center-block" alt=""/></div>
+</section>
+<!--end-->
+<section class="page sx-jianju">
+    <div class="container">
+        ﻿
+        <ul class="list-inline menu-kj2 text-center wow animated fadeInUp">
+
+
+        </ul>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
+                <article class="content text-center">
+                    <div class="page-lianxi">
+                        <h2 class="t-m-none">
+                            您可以通过以下方式与我们联系</h2>
+                        <hr class="hr"/>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>
+                                    在线沟通</h3>
+                                <p>
+                                    在线时间：周一到周六（9：00-18：00）<br/>
+                                    点击下方沟通按钮在线解答您的疑难</p>
+                                <p class="wygt">
+                                    &nbsp;</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>
+                                    电话沟通</h3>
+                                <p>
+                                    24小时服务：027-88888888<br/>
+                                    办公手机：13888888888<br/>
+                                    邮箱：admin@qq.com<br/>
+                                    公司地址：湖北省武汉市武昌区经济开发区</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>
+                                    亲临公司</h3>
+                                <p>
+                                    驾车路线：湖北省武汉市武昌区经济开发区<br/>
+                                    公交线路：乘坐59路老城路口站下（步行约300米）<br/>
+                                    地铁路线：体育西路站A出口（步行约100米）</p>
+                                <p>
+                                    <a href="javascript:;" target="_blank"><img alt="在地图上找到我们"
+                                                                                src="skin/images/map.png"/></a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="list-page">
+                    </ul>
+                    <div class="more-menu">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <figure><a href="javascript:;"><span class="icon-page-xitong"></span>
+                                    <h3>公司简介</h3>
+                                </a></figure>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <figure><a href="javascript:;"><span class="icon-page-xitong"></span>
+                                    <h3>设计</h3>
+                                </a></figure>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <figure><a href="javascript:;"><span class="icon-page-xitong"></span>
+                                    <h3>案例</h3>
+                                </a></figure>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <figure><a href="javascript:;"><span class="icon-page-xitong"></span>
+                                    <h3>联系</h3>
+                                </a></figure>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<div th:replace="common :: myfooter"></div>
+<!--end-->
+<ul class="list-unstyled kefu visible-xs-block">
+    <li><a class="gt" href="javascript:;" title="在线沟通" target="_blank"><span class="icon-goutong"></span></a></li>
+    <li class="hidden-xs"><a class="lx" href="javascript:;" title="联系"><span class="icon-page-lianxi"></span></a></li>
+    <li class="visible-xs-inline-block"><a class="lx" href="javascript:;" title="拔打电话"><span
+            class="icon-page-lianxi"></span></a></li>
+    <li><a id="top" class="top" href="javascript:;" title="回顶部"><span class="icon-top"></span></a></li>
+</ul>
+<!--end-->
+<script src="skin/js/jquery.min.js"></script>
+<script src="skin/js/wow.min.js"></script>
+<script src="skin/js/base.js"></script>
+<script src="skin/js/sdcms.hits.js"></script>
+<script src="skin/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $(".navbar-nav li:nth-child(8)").addClass("hover");
+    });
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 100
+        });
+    wow.init();
+    document.getElementById('moar').onclick = function () {
+        var section = document.createElement('section');
+        section.className = 'section--purple wow fadeInDown';
+        this.parentNode.insertBefore(section, this);
+    };
+</script>
+
+<script src="skin/js/fastclick.min.js"></script>
+<script src="skin/js/owl.carousel.min.js"></script>
+<script src="skin/js/owl.carousel.quote.js"></script>
+</body>
+</html>
