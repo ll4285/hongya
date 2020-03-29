@@ -36,7 +36,7 @@ Channel
 **Broker**
 表示消息队列服务器实体。
 
-##2 自动配置
+## 2 自动配置
 
 1、RabbitAutoConfiguration
 
@@ -52,9 +52,9 @@ Channel
 
 6、@EnableRabbit + @RabbitListener 监听消息队列的内容。
 
-##3 使用
+## 3 使用
 
-###一、引入pom依赖
+### 一、引入pom依赖
 
 ~~~xml
 <dependency>
@@ -74,7 +74,7 @@ spring.activemq.password=guest
 spring.rabbitmq.virtual-host=/
 ~~~
 
-###三、配置类(添加MessageConverter 消息序列化配置)
+### 三、配置类(添加MessageConverter 消息序列化配置)
 
 ~~~java
 @Configuration
@@ -87,7 +87,7 @@ public class AMQPConfig {
 }
 ~~~
 
-###四、具体使用
+### 四、具体使用
 
 发送消息
 
@@ -131,7 +131,7 @@ public void receive(Book book){
 }
 ~~~
 
-###AmqpAdmin 管理组件
+### AmqpAdmin 管理组件
 
 创建Exchange，Queue，Binding 
 
