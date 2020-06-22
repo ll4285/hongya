@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CaseService {
     List<Case> findFirst10();
+    Case findById(Integer id);
 }

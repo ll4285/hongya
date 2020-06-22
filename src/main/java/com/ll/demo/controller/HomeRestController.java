@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @RestController
@@ -30,5 +31,9 @@ public class HomeRestController {
         return caseService.findFirst10() ;
     }
 
+    @GetMapping("/home/picture/case/{id}")
+    public Case findById(@PathVariable Integer id){
+        return caseService.findById(id);
+    }
 }
 

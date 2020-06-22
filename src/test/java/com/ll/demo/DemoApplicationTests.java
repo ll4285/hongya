@@ -1,5 +1,6 @@
 package com.ll.demo;
 
+import com.ll.demo.entity.Case;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.AmqpAdmin;
@@ -9,9 +10,11 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +27,9 @@ public class DemoApplicationTests {
 
     @Autowired
     AmqpAdmin amqpAdmin ;
+
+    @Autowired
+    RedisTemplate<String,Object> redisTemplate;
 
     /**
      * rabbitmq 发送 点对点消息 测试
@@ -78,5 +84,17 @@ public class DemoApplicationTests {
                 "amqpAdmin.exchange","amqp.haha",null));
 
     }
+
+    @Test
+    public void test01(){
+        redisTemplate.opsForValue().set("xingming","liulei");
+        Case c = new Case();
+        c.setId(1);
+        c.setName("哈哈");
+        c.setUrl("www.baidu.com");
+        c.setCreateTime(new Date());
+        redisTemplate.opsForHash().put("case:",c.getId(),c);
+    }
+
 
 }
